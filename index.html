@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gorras de Cuero Premium - TUS GORRAS</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Iconos de Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+    />
+</head>
+<body>
+    <!-- HEADER PRINCIPAL -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <!-- LOGO Y NOMBRE -->
+            <div class="logo-section">
+                <img
+                    id="downloadable-image"
+                    src="IMAGE/b1de9cd41ff667a9ec518cd73648be4b.jpg"
+                    alt="TUS GORRAS Logo"
+                    class="logo" />
+                <div>
+                    <h1>coffee leather</h1>
+                    <p>Artesanía en Cuero Premium</p>
+                </div>
+
+                <!-- Botón de descarga con barra -->
+                <div class="download-container">
+                    <button id="download-btn" class="btn-primary">
+                        <i class="fas fa-download"></i> Descargar Logo
+                    </button>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table clor" border = "45"><tr>HOLA</tr></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+            <div class="table clor"></div>
+
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <nav class="main-nav">
+                <a href="#presentacion" class="nav-link active">Presentación</a>
+                <a href="#tienda" class="nav-link">Tienda</a>
+                <a href="#cueros" class="nav-link">Tipos de Cuero</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+
+
+
+
+            <!-- BOTÓN CERRAR SESIÓN -->
+            <button onclick="logout()" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- =================== SECCIÓN PRESENTACIÓN =================== -->
+    <section id="presentacion" class="section">
+        <div class="container">
+            <h2><i class="fas fa-star"></i> Excelencia en Cuero Artesanal</h2>
+
+            <div class="presentation-grid">
+                <!-- TEXTO DE PRESENTACIÓN -->
+                <div class="presentation-text">
+                    <h3>Artesanía de Cuero Premium</h3>
+                    <p>
+                        En <strong>TUS GORRAS</strong> nos especializamos en la creación
+                        de gorras y sombreros de cuero de la más alta calidad. Cada pieza es
+                        única, elaborada artesanalmente con cueros seleccionados de las
+                        mejores curtidurías.
+                    </p>
+
+                    <div class="features">
+                        <h4>Nuestros Servicios:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gorras personalizadas a medida</li>
+                            <li><i class="fas fa-check"></i> Diferentes tipos de cuero premium</li>
+                            <li><i class="fas fa-check"></i> Diseños exclusivos y personalizados</li>
+                            <li><i class="fas fa-check"></i> Acabados artesanales de calidad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IMAGEN DESTACADA -->
+                <div class="presentation-image">
+                    <img
+                        src="IMAGE/3903a42214f5b34e17d1c980d568858d.jpg"
+                        alt="Gorra de cuero premium"
+                        class="hero-image"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== SECCIÓN TIENDA =================== -->
+    <section id="tienda" class="section">
+        <div class="container">
+            <h2><i class="fas fa-shopping-bag"></i> Nuestra Colección</h2>
+
+            <!-- Carrito de Compras -->
+            <div class="cart-section">
+                <div class="cart-header">
+                    <h3><i class="fas fa-shopping-cart"></i> Carrito de Compras</h3>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+                <div id="cart-items" class="cart-items">
+                    <p class="empty-cart">Tu carrito está vacío</p>
+                </div>
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button id="clear-cart" class="btn-secondary">
+                    <i class="fas fa-trash"></i> Vaciar Carrito
+                </button>
+            </div>
+
+            <!-- Productos -->
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img
+                        src="IMAGE/0ce5213edecd95402f6f8dda5d22a8db.jpg"
+                        alt="Gorra Clásica Marrón"
+                        class="product-image"
+                    />
+                    <div class="product-info">
+                        <h3>Juego Accesorios Clasico Marrón</h3>
+                        <p class="product-description">
+                            Reloj de cuero genuino con diseño clásico y acabado artesanal.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-leaf"></i> Cuero vacuno premium</span>
+                            <span><i class="fas fa-palette"></i> Color marrón natural</span>
+                        </div>
+                        <div class="product-price">$89.99</div>
+                        <button
+                            class="btn-primary"
+                            onclick="addToCart('Gorra Clásica Marrón', 89.99)"
+                        >
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img
+                        src="IMAGE/27c251b6c73b622d2c8a38fc438aa44f.jpg"
+                        alt="Gorra Urbana Negra"
+                        class="product-image"
+                    />
+                    <div class="product-info">
+                        <h3>Gorra Urbana Colores</h3>
+                        <p class="product-description">
+                            Gorra moderna de cuero negro con detalles contemporáneos.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-leaf"></i> Cuero de búfalo</span>
+                            <span><i class="fas fa-palette"></i> Acabado negro mate</span>
+                        </div>
+                        <div class="product-price">$94.99</div>
+                        <button
+                            class="btn-primary"
+                            onclick="addToCart('Gorra Urbana Negra', 94.99)"
+                        >
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img
+                        src="IMAGE/38d4d0079f575828037f683e3e1a687d.jpg"
+                        alt="Gorra Vintage Aged"
+                        class="product-image"
+                    />
+                    <div class="product-info">
+                        <h3>Gafas Vintage Aged</h3>
+                        <p class="product-description">
+                            Gafas con acabado envejecido para un look vintage auténtico.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-leaf"></i> Cuero curtido vegetal</span>
+                            <span><i class="fas fa-palette"></i> Acabado vintage</span>
+                        </div>
+                        <div class="product-price">$99.99</div>
+                        <button
+                            class="btn-primary"
+                            onclick="addToCart('Gorra Vintage Aged', 99.99)"
+                        >
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img
+                        src="IMAGE/132e3014a6a825c5e9345b291162ab07.jpg"
+                        alt="Gorra Personalizada"
+                        class="product-image"
+                    />
+                    <div class="product-info">
+                        <h3>Correa Personalizada</h3>
+                        <p class="product-description">
+                            Diseño personalizado según tus preferencias y estilo único.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-leaf"></i> Cuero a elección</span>
+                            <span><i class="fas fa-palette"></i> Colores personalizados</span>
+                        </div>
+                        <div class="product-price">$119.99</div>
+                        <button
+                            class="btn-primary"
+                            onclick="addToCart('Gorra Personalizada', 119.99)"
+                        >
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <img
+                        src="IMAGE/c6b73bd606e73d9cf470637538c11949.jpg"
+                        alt="Gorra Personalizada"
+                        class="product-image"
+                    />
+                    <div class="product-info">
+                        <h3>Gorra Personalizada</h3>
+                        <p class="product-description">
+                            Diseño personalizado de tu preferencia
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-leaf"></i> Cuero a elección</span>
+                            <span><i class="fas fa-palette"></i> Colores personalizados</span>
+                        </div>
+                        <div class="product-price">$119.99</div>
+                        <button
+                            class="btn-primary"
+                            onclick="addToCart('Gorra Personalizada', 119.99)"
+                        >
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <img
+                        src="IMAGE/82860bcadb423b536367251787ed9818.jpg"
+                        alt="Gorra Extra Cuero Personalizada"
+                        class="product-image"
+                    />
+                    <div class="product-info">
+                        <h3>Gorra Extra Cuero Personalizada</h3>
+                        <p class="product-description">
+                            Diseño exclusivo en cuero premium para un estilo único.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-leaf"></i> Cuero premium</span>
+                            <span><i class="fas fa-palette"></i> Colores personalizados</span>
+                        </div>
+                        <div class="product-price">$139.99</div>
+                        <button
+                            class="btn-primary"
+                            onclick="addToCart('Gorra Extra Cuero Personalizada', 139.99)"
+                        >
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin del grid de productos -->
+        </div>
+    </section>
+
+    <!-- =================== SECCIÓN TIPOS DE CUERO =================== -->
+    <section id="cueros" class="section">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> Nuestros Cueros Premium</h2>
+            <div class="leather-types">
+                <div class="leather-card">
+                    <h3>Cuero Vacuno</h3>
+                    <p>
+                        El cuero más resistente y duradero, perfecto para uso diario.
+                        Proviene de las mejores curtidurías italianas.
+                    </p>
+                </div>
+                <div class="leather-card">
+                    <h3>Cuero de Búfalo</h3>
+                    <p>
+                        Textura única y gran resistencia al agua. Ideal para climas húmedos
+                        y uso intensivo.
+                    </p>
+                </div>
+                <div class="leather-card">
+                    <h3>Cuero Curtido Vegetal</h3>
+                    <p>
+                        Proceso ecológico que da un acabado natural y aroma característico.
+                        Se envejece hermosamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== SECCIÓN CONTACTO =================== -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contáctanos</h2>
+            <div class="contact-grid">
+                <!-- INFORMACIÓN DE CONTACTO -->
+                <div class="contact-info">
+                    <h3>¿Listo para tu gorra personalizada?</h3>
+                    <p>
+                        Contáctanos para discutir tu diseño personalizado o para hacer tu
+                        pedido.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@tusgorras.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Taller Artesanal - Ciudad de México</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO DE CONTACTO -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TUS GORRAS</h4>
+                    <p>Artesanía en cuero premium desde 2020</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TUS GORRAS - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Principal -->
+    <script src="principal.js"></script>
+
+    <!-- Script Logout -->
+    <script>
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

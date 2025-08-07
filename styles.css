@@ -1,0 +1,478 @@
+/* =====================================================
+   Archivo: styles.css
+   Estilos para:
+   1. Header y navegación
+   2. Secciones: Presentación, Tienda, Cuero, Contacto
+   3. Carrito de compras
+   4. Responsive design
+===================================================== */
+
+/* -------- VARIABLES -------- */
+:root {
+    --brown-dark: #8B4513;
+    --brown-light: #A0522D;
+    --white: #fff;
+    --gray-dark: #333;
+    --gray-light: #666;
+    --gray-medium: #555;
+    --gray-darker: #222;
+}
+
+/* -------- RESET & BASE -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#A0522D
+
+/* -------- HEADER -------- */
+.main-header {
+    background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-light) 100%);
+    color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Contenedor flex del header con max-width y padding */
+.header-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Ajuste logo y texto juntos */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.logo-section h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.logo-section p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Navegación */
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Botón cerrar sesión */
+.logout-btn {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-btn i {
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background-color: var(--white);
+    color: var(--brown-dark);
+}
+
+/* -------- SECCIONES GENERALES -------- */
+.section {
+    padding: 60px 0;
+}
+
+.section:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--brown-dark);
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brown-dark), var(--brown-light));
+    margin: 15px auto;
+}
+
+/* -------- PRESENTACIÓN -------- */
+.presentation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.presentation-text h3 {
+    color: var(--brown-dark);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.presentation-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.features ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.features li {
+    padding: 8px 0;
+    font-size: 1.1em;
+}
+
+.features i {
+    color: var(--brown-dark);
+    margin-right: 10px;
+}
+
+.presentation-image {
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+/* -------- TIENDA -------- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: var(--brown-dark);
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: var(--gray-light);
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.product-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--brown-dark);
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background: var(--brown-dark);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--brown-light);
+}
+
+.btn-secondary {
+    background: #555;
+    color: var(--white);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #333;
+}
+
+/* -------- CARRITO -------- */
+.cart-section {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-count {
+    background: var(--brown-dark);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.cart-items {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-remove {
+    background:#8B4513 ;
+    color: var(--white);
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-total {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+/* -------- CONTACTO -------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-info h3 {
+    color: var(--brown-dark);
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--gray-medium);
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    color: var(--brown-dark);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--gray-medium);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 10px;
+}
+
+/* -------- FOOTER -------- */
+.main-footer {
+    background: var(--brown-dark);
+    color: var(--white);
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: var(--white);
+    margin-right: 15px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+    .presentation-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav .nav-link {
+        display: inline-block;
+        width: auto;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-section {
+        justify-content: center;
+    }
+
+    .logout-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
