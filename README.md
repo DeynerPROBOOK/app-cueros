@@ -1,3 +1,7 @@
+User: estudiante
+Pasword: 1234
+
+
 sistema-ventas
 Creacion de un sitema de ventas de cuero
 
