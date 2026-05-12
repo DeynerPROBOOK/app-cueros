@@ -1,44 +1,61 @@
-User: estudiante
-Pasword: 1234
+# 🛍️ Sistema de Ventas - Cueros
 
+Aplicación web enfocada en la venta de productos de cuero y sus diferentes
+variantes, diseñada para brindar una experiencia moderna, intuitiva y
+visualmente atractiva.
 
-sistema-ventas
-Creacion de un sitema de ventas de cuero
+Este proyecto no solo simula una tienda en línea, sino que también es una
+muestra de mis habilidades en desarrollo web. El código es completamente
+público para que otros desarrolladores puedan explorarlo, aprender y aportar.
 
-Aplicación web enfocada en la venta de productos de cuero y sus diferentes variantes, diseñada para brindar una experiencia de usuario moderna, intuitiva y visualmente atractiva.
+---
 
-Este proyecto no solo busca simular una tienda en línea, sino también servir como muestra de mis habilidades en desarrollo web. El código es completamente público con el objetivo de que otros desarrolladores puedan explorarlo, aprender de él y aportar mejoras.
+## ✨ Características
 
-Características:
-Catálogo de productos de cuero (bolsos, carteras, cinturones, etc.)
-Diseño responsive adaptable a dispositivos móviles y escritorio
-Interfaz limpia y fácil de usar
-Código estructurado y mantenible
-Posibilidad de escalar a funcionalidades más complejas (carrito, pagos, etc.)
+- 🧳 Catálogo de productos de cuero (bolsos, carteras, cinturones, etc.)
+- 📱 Diseño responsive para móvil y escritorio
+- 🎨 Interfaz limpia e intuitiva
+- 🧱 Código estructurado y mantenible
+- 🔐 Sistema de login con validación
+- 📈 Escalable a funcionalidades futuras (carrito, pagos, etc.)
 
-Tecnologías utilizadas (En proceso):
--HTML5
--CSS
--JavaScript
+---
 
-Si deceas contribuir en el desarrollo de esta web, eres bienveid@
+## 🔐 Credenciales de prueba
 
-/---------------------------------------------------------------------------------------------------------------
+| Campo    | Valor |
+|----------|-------|
+| Usuario  | `estudiante` |
+| Password | `****` |
 
-A web application focused on selling leather goods and their various forms, designed to provide a modern, intuitive, and visually appealing user experience.
+> ⚠️ No compartir credenciales reales en repositorios públicos.
 
-This project not only aims to simulate an online store but also to showcase my web development skills. The code is completely public so that other developers can explore it, learn from it, and contribute improvements.
+---
 
-Features:
-Leather product catalog (bags, wallets, belts, etc.)
-Responsive design adaptable to mobile and desktop devices
-Clean and easy-to-use interface
-Structured and maintainable code
-Scalability to more complex functionalities (shopping cart, payments, etc.)
+## 🛠️ Tecnologías usadas
 
-Technologies used (In progress):
--HTML5
--CSS
--JavaScript
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white)
 
-If you would like to contribute to the development of this website, you are welcome!
+> 🚧 Proyecto en proceso de desarrollo
+
+---
+
+## 🚀 Cómo ejecutar
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/DeynerPROBOOK/sistema-ventas.git
+
+# 2. Entrar a la carpeta
+cd sistema-ventas
+
+# 3. Abrir index.html en el navegador
+# O usar Live Server desde VS Code
+```
+
+---
+
+## 📁 Estructura del proyecto
